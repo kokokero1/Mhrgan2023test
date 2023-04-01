@@ -14,7 +14,7 @@ for (let i = 1; i <= 10; i++) {
  k += i + ", ";
 
 }
-   document.getElementById("demo").innerHTML = "اختار الاصحاح"+k;
+   document.getElementById("demo").innerHTML = "اختار الاصحاح,"+k;
 }
 
 </script>
