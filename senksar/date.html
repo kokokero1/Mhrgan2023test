@@ -19,7 +19,6 @@ var urlParams = new URLSearchParams(queryString);
 var day = urlParams.get('day');
 var month = urlParams.get('month');
 var year = urlParams.get('year');
-var coyear = urlParams.get('coyear');
 var full = year + "-" + month + "-" + day ;
 var fulll = new Date(year + "," + month + "," + day) ;
 
@@ -45,22 +44,13 @@ var s = list[1];
 if (s == undefined){
   var s = "0";
 }
- 
- 
- 
- let kk = coyear/5; //copticyear.replace(" ERA1", "")/5;
 
-var list = kk.toString().split("."); 
-var ss = list[1]; 
-if (ss == undefined){
-  var ss = "0";
-}
 //Number.isInteger(copticDate/5);
 var str = display.replace(" ERA1", "");
 
 
 
-document.getElementById("demo").innerHTML = cday + "-" + cmonth + "-" + cyear + "," + s + "," + ss;//str[5] ;//+ "," + s ;//+ '<br>' + k + '<br>' + s;
+document.getElementById("demo").innerHTML = cday + "-" + cmonth + "-" + cyear + "," + s;//str[5] ;
 }
 
 
@@ -69,37 +59,11 @@ document.getElementById("demo").innerHTML = cday + "-" + cmonth + "-" + cyear + 
 
 
 
-//document.getElementById("demo").innerHTML = full;
+
 
 
 
 </script>
-
-
-<!--
-
-
-
-<p>Enter a date in the Gordian calendar:</p>
-
-<input type="date" id="myDate" value="2023-04-01">
-
-<button onclick="myFunction()">Convert</button>
-
-<p id="demo"></p>
-
-<script>
-function myFunction() {
-  var gordianDate = new Date(document.getElementById("myDate").value);
-  var copticDate = new Intl.DateTimeFormat('fr', { calendar:'coptic'}).format(gordianDate);
-  document.getElementById("demo").innerHTML = copticDate;
-}
-</script>
-
-</body>
-</html>
-
--->
 
 
 </body>
