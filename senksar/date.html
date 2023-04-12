@@ -47,10 +47,48 @@ if (s == undefined){
 
 //Number.isInteger(copticDate/5);
 var str = display.replace(" ERA1", "");
+if( cmonth == 1 ){
+ var cmonthtext = "توت";
+}
+if( cmonth == 2 ){
+ var cmonthtext = "بابة";
+}
+ if( cmonth == 3 ){
+ var cmonthtext = "هاتور";
+}
+ if( cmonth == 4 ){
+ var cmonthtext = "كيهك";
+}
+ if( cmonth == 5 ){
+ var cmonthtext = "طوبة";
+}
+ if( cmonth == 6 ){
+ var cmonthtext = "أمشير";
+}
+ if( cmonth == 7 ){
+ var cmonthtext = "برمهات";
+}
+ if( cmonth == 8 ){
+ var cmonthtext = "برمودة";
+}
+ if( cmonth == 9 ){
+ var cmonthtext = "بشنس";
+}
+ if( cmonth == 10 ){
+ var cmonthtext = "بؤونة";
+}
+ if( cmonth == 11 ){
+ var cmonthtext = "أبيب";
+}
+ if( cmonth == 12 ){
+ var cmonthtext = "مسرى";
+}
+ if( cmonth == 13 ){
+ var cmonthtext = "نسيء";
+}
+ 
 
-
-
-document.getElementById("demo").innerHTML = cday + "-" + cmonth + "-" + cyear + "," + s;//str[5] ;
+document.getElementById("demo").innerHTML = cday + "-" + cmonthtext + "-" + cyear + "," + s;//str[5] ;
 }
 
 
