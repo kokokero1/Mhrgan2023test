@@ -27,7 +27,16 @@ var cyear = partValues[4];
 var display = copticDate.replace(/\//g, "-");
 //let t = [newStr];
 //var copticDate = 2024;
-let k = cyear/5; //copticyear.replace(" ERA1", "")/5;
+ let kk = cyear/5;
+ 
+ 
+ var listt = kk.toString().split("."); 
+var ss = list[1]; 
+if (ss == undefined){
+  var ss = "0";
+}
+ 
+let k = cyear/4; //copticyear.replace(" ERA1", "")/5;
 
 var list = k.toString().split("."); 
 var s = list[1]; 
@@ -75,7 +84,7 @@ if( cmonth == 2 ){
  if( cmonth == 13 ){
  var cmonthtext = "نسيء";
 }
-document.getElementById("demo").innerHTML = cday + "-" + cmonthtext + "-" + cyear + "," + s + "," + cmonth + "," + cday;//str[5] ;
+document.getElementById("demo").innerHTML = cday + "-" + cmonthtext + "-" + cyear + "," + s + "," + ss + "," + cmonth + "," + cday;//str[5] ;
 }
 </script>
 </body>
