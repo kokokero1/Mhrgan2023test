@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<title id="demo"></title>
+<body onload="myFunction()">
+<!--<p id="demo"></p>-->
+
+
+
+<script>
+var queryString = window.location.search;
+var urlParams = new URLSearchParams(queryString);
+var day = urlParams.get('day');
+var month = urlParams.get('month');
+var year = urlParams.get('year');
+//var full = year + "-" + month + "-" + day ;
+var fulll = new Date(year + "," + month + "," + day) ;
+
+//document.getElementById("myDate").value = fulll;
+
+function myFunction() {
+  //var gordianDate = new Date(document.getElementById("myDate").value);
+
+var copticDatee = new Intl.DateTimeFormat('en',{ year: 'numeric', calendar:'coptic'});
+
+const parts = copticDatee.formatToParts(fulll);
+const partValues = parts.map(p => p.value);
+//var cday = partValues[2];
+//var cmonth = partValues[0];
+var cyear = partValues[0];
+//var display = copticDate.replace(/\//g, "-");
+//let t = [newStr];
+//var copticDate = 2024;
+let k = cyear/5; //copticyear.replace(" ERA1", "")/5;
+
+var list = k.toString().split("."); 
+var s = list[1]; 
+if (s == undefined){
+  var s = "0";
+}
+document.getElementById("demo").innerHTML = s;
+}
+</script>
+</body>
+</html>
