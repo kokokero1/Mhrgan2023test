@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ <title id="demo"></title>
+<body onload="myFunction()">
+
+
+<!--
+<input type="date" id="myDate" value="">
+
+<button onclick="myFunction()">Convert</button>
+
+<p id="demo"></p>-->
+
+
+
+<script>
+var queryString = window.location.search;
+var urlParams = new URLSearchParams(queryString);
+
+var coyear = urlParams.get('coyear');
+
+
+function myFunction() {
+ 
+ let kk = coyear/4;
+
+var list = kk.toString().split("."); 
+var ss = list[1]; 
+if (ss == undefined){
+  var ss = "0";
+}
+
+document.getElementById("demo").innerHTML = ss;
+}
+
+</script>
+
+</body>
+</html>
