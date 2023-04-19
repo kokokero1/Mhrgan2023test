@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<title id="demo"></title>
+<body onload="myFunction()">
+<script>
+var queryString = window.location.search;
+var urlParams = new URLSearchParams(queryString);
+var year = urlParams.get('cyear');
+function myFunction() {
+var cyear = year;
+let k = cyear/5;
+var list = k.toString().split("."); 
+var s = list[1]; 
+if (s == undefined){
+  var s = "0";
+}
+document.getElementById("demo").innerHTML = s;
+}
+</script>
+</body>
+</html>
